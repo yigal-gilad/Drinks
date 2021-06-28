@@ -1,0 +1,15 @@
+<div *ngIf="state.state.api_results">
+    <h3>{{ state.state.api_results.length }} results found:</h3>
+    <div class="row">
+        <div class="col-6 col-lg-3" *ngFor="let x of state.state.api_results; let i = index">
+            <br>
+            <img *ngIf="x.strDrinkThumb" [src]="x.strDrinkThumb | safe: 'url'" class="img-fluid">
+            <h5>{{ x.strDrink }}</h5>
+            <p>{{ x.strCategory }}, {{ x.strAlcoholic }}</p>
+            <button type="button" (click)="selectItem(i)" class="btn btn-outline-dark btn-sm">
+                <i class="fas fa-info-circle"></i> More Details
+            </button>
+        </div>
+    </div>
+</div>
+<!-- {{ state.state.api_results | json }} -->

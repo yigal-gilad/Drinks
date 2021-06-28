@@ -1,0 +1,130 @@
+<div>
+    <div class="jumbotron">
+        <h1>ABOUT</h1>
+        <p>This web application requests a list of drinks based on your search from "The Coctails API"
+            and displays it for you.</p>
+        <h6><i class="fab fa-github"></i> View source Code<a href="https://github.com/yigaltheboss/Drinks"> Here</a>.
+        </h6>
+        <h6><i class="fab fa-linkedin"></i> Follow The Creator<a
+                href="https://www.linkedin.com/in/yigal-gilad-2504831a9/"> Here</a>.</h6>
+    </div>
+</div>
+<div class="card" *ngIf="state.state.random_item">
+    <div class="card-body">
+        <h3>{{ state.state.random_item.strDrink }}</h3>
+        <p>{{ state.state.random_item.strCategory }}, {{ state.state.random_item.strAlcoholic }}</p>
+        <div class="row">
+            <div class="col-6 col-lg-2">
+                <img *ngIf="state.state.random_item.strDrinkThumb"
+                    [src]="state.state.random_item.strDrinkThumb | safe: 'url'" class="img-fluid">
+            </div>
+            <div class="col-6 col-lg-10">
+                <h6><span style="font-weight: bold;">Glass: </span>
+                    {{ state.state.random_item.strGlass }}
+                </h6>
+                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">
+                    View Ingredients
+                </button>
+            </div>
+        </div>
+        <p style="font-style: italic;">"{{ state.state.random_item.strInstructions }}"</p>
+    </div>
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Ingredients for {{ state.state.random_item.strDrink }}</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <p *ngIf="state.state.random_item.strIngredient1">
+                        {{ state.state.random_item.strMeasure1 }}
+                        <span *ngIf="state.state.random_item.strMeasure1"> of </span>
+                        {{ state.state.random_item.strIngredient1 }}
+                    </p>
+                    <p *ngIf="state.state.random_item.strIngredient2">
+                        {{ state.state.random_item.strMeasure2 }}
+                        <span *ngIf="state.state.random_item.strMeasure2"> of </span>
+                        {{ state.state.random_item.strIngredient2 }}
+                    </p>
+                    <p *ngIf="state.state.random_item.strIngredient3">
+                        {{ state.state.random_item.strMeasure3 }}
+                        <span *ngIf="state.state.random_item.strMeasure3"> of </span>
+                        {{ state.state.random_item.strIngredient3 }}
+                    </p>
+                    <p *ngIf="state.state.random_item.strIngredient4">
+                        {{ state.state.random_item.strMeasure4 }}
+                        <span *ngIf="state.state.random_item.strMeasure4"> of </span>
+                        {{ state.state.random_item.strIngredient4 }}
+                    </p>
+                    <p *ngIf="state.state.random_item.strIngredient5">
+                        {{ state.state.random_item.strMeasure5 }}
+                        <span *ngIf="state.state.random_item.strMeasure5"> of </span>
+                        {{ state.state.random_item.strIngredient5 }}
+                    </p>
+                    <p *ngIf="state.state.random_item.strIngredient6">
+                        {{ state.state.random_item.strMeasure6 }}
+                        <span *ngIf="state.state.random_item.strMeasure6"> of </span>
+                        {{ state.state.random_item.strIngredient6 }}
+                    </p>
+                    <p *ngIf="state.state.random_item.strIngredient7">
+                        {{ state.state.random_item.strMeasure7 }}
+                        <span *ngIf="state.state.random_item.strMeasure7"> of </span>
+                        {{ state.state.random_item.strIngredient7 }}
+                    </p>
+                    <p *ngIf="state.state.random_item.strIngredient8">
+                        {{ state.state.random_item.strMeasure8 }}
+                        <span *ngIf="state.state.random_item.strMeasure8"> of </span>
+                        {{ state.state.random_item.strIngredient8 }}
+                    </p>
+                    <p *ngIf="state.state.random_item.strIngredient9">
+                        {{ state.state.random_item.strMeasure9 }}
+                        <span *ngIf="state.state.random_item.strMeasure9"> of </span>
+                        {{ state.state.random_item.strIngredient9 }}
+                    </p>
+                    <p *ngIf="state.state.random_item.strIngredient10">
+                        {{ state.state.random_item.strMeasure10 }}
+                        <span *ngIf="state.state.random_item.strMeasure10"> of </span>
+                        {{ state.state.random_item.strIngredient10 }}
+                    </p>
+                    <p *ngIf="state.state.random_item.strIngredient11">
+                        {{ state.state.random_item.strMeasure11 }}
+                        <span *ngIf="state.state.random_item.strMeasure11"> of </span>
+                        {{ state.state.random_item.strIngredient11 }}
+                    </p>
+                    <p *ngIf="state.state.random_item.strIngredient12">
+                        {{ state.state.random_item.strMeasure12 }}
+                        <span *ngIf="state.state.random_item.strMeasure12"> of </span>
+                        {{ state.state.random_item.strIngredient12 }}
+                    </p>
+                    <p *ngIf="state.state.random_item.strIngredient13">
+                        {{ state.state.random_item.strMeasure13 }}
+                        <span *ngIf="state.state.random_item.strMeasure13"> of </span>
+                        {{ state.state.random_item.strIngredient13 }}
+                    </p>
+                    <p *ngIf="state.state.random_item.strIngredient14">
+                        {{ state.state.random_item.strMeasure14 }}
+                        <span *ngIf="state.state.random_item.strMeasure14"> of </span>
+                        {{ state.state.random_item.strIngredient14 }}
+                    </p>
+                    <p *ngIf="state.state.random_item.strIngredient15">
+                        {{ state.state.random_item.strMeasure15 }}
+                        <span *ngIf="state.state.random_item.strMeasure15"> of </span>
+                        {{ state.state.random_item.strIngredient15 }}
+                    </p>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top">
+  <div class="container">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" [routerLink]="'/home'" skipLocationChange><i class="fas fa-home"></i></a>
+    <form class="form-inline">
+      <div class="input-group">
+        <input type="text" [(ngModel)]="search" (input)="searchInput(search)" name="search" class="form-control"
+          placeholder="Search a drink here...">
+        <div class="input-group-append">
+          <button class="btn btn-light" (click)="searchButton(search)" [disabled]="!search"><i
+              class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
