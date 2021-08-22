@@ -1,18 +1,18 @@
-# RavKavStations
+# Drinks search engine
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
 ## Some info
 
-This web application requests a list of nearby service stations based on your location and other parameters from Rav-Kav API and displays it on maps from OpenStreetMap.
+This web application is a simple search interface to exteact data from https://www.thecocktaildb.com.
 
 ## Technologies used
 
-Angular, NodeJs, Express, OpenStreetMap, Bootstrap.
+Angular, NodeJs, Express, Bootstrap.
 
 ## Link for this application
 
-https://ravkav-service-stations.herokuapp.com
+https://drinks-search-engine.herokuapp.com
 
 ## Development server
 
